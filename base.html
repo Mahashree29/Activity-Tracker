@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Flask App{% endblock %}</title>
+    <!-- Add any additional CSS or stylesheets here -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <!-- Add additional navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        <!-- This is where the content of other pages will be inserted -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    
+    <!-- Add any additional scripts or JavaScript here -->
+</body>
+</html>
